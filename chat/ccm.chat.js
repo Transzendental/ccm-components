@@ -1,16 +1,12 @@
-/**
- * @overview ccm component for simple chats
- * @author André Kless <andre.kless@web.de> 2016
- */
 ccm.component( {
 
-  name: 'chat',
+  name: 'userStory',
 
   config: {
 
     html:  [ ccm.store, { local: 'templates.json' } ],
-    key:   'test',
-    store: [ ccm.store, { url: 'ws://ccm2.inf.h-brs.de/index.js', store: 'chat' } ],
+    key:   'userStorys',
+    store: [ ccm.store, { url: 'ws://ccm2.inf.h-brs.de/index.js', store: 'userStory' } ],
     style: [ ccm.load, 'style.css' ],
     user:  [ ccm.instance, 'https://kaul.inf.h-brs.de/ccm/components/user2.js' ]
 
@@ -35,7 +31,7 @@ ccm.component( {
       self.store.get( self.key, function ( dataset ) {
 
         if ( dataset === null )
-          self.store.set( { key: self.key, messages: [] }, proceed );
+          self.store.set( { key: self.key, storys: [] }, proceed );
         else
           proceed( dataset );
 
@@ -43,22 +39,23 @@ ccm.component( {
 
           element.html( ccm.helper.html( self.html.get( 'main' ) ) );
 
-          var messages_div = ccm.helper.find( self, '.messages' );
+          var usDiv = ccm.helper.find( self, '.userStorys' );
 
-          for ( var i = 0; i < dataset.messages.length; i++ ) {
+          for ( var i = 0; i < dataset.storys.length; i++ ) {
 
-            var message = dataset.messages[ i ];
+            var us = dataset.storys[ i ];
 
-            messages_div.append( ccm.helper.html( self.html.get( 'message' ), {
+            usDiv.append( ccm.helper.html( self.html.get( 'userStory' ), {
 
-              name: ccm.helper.val( message.user ),
-              text: ccm.helper.val( message.text )
+              name: ccm.helper.val( us.name ),
+              text: ccm.helper.val( us.text ),
+              aufwand: ccm.helper.val( us.aufwand )
 
             } ) );
 
           }
 
-          messages_div.append( ccm.helper.html( self.html.get( 'input' ), { onsubmit: function () {
+          usDiv.append( ccm.helper.html( self.html.get( 'input' ), { onsubmit: function () {
 
             var value = ccm.helper.val( ccm.helper.find( self, 'input' ).val() ).trim();
 
@@ -66,7 +63,7 @@ ccm.component( {
 
             self.user.login( function () {
 
-              dataset.messages.push( { user: self.user.data().key, text: value } );
+              dataset.storys.push( { user: self.user.data().key, text: value } );
 
               self.store.set( dataset, function () { self.render(); } );
 

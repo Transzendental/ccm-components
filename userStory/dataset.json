@@ -1,11 +1,10 @@
 {
-  "key": "userStorys",
+  "key": "userStory",
   "storys": [
     {
       "name": "test1",
       "text": "qwertzuiop",
       "aufwand": 5
-
     },
     {
       "name": "test2",

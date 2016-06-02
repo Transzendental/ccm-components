@@ -1,12 +1,12 @@
 {
   "main": {
     "tag": "div",
-    "class": "messages"
+    "class": "userStorys"
   },
 
-  "message": {
+  "userStory": {
     "tag": "div",
-    "class": "message",
+    "class": "userStory",
     "inner": [
       {
         "tag": "div",
@@ -23,7 +23,7 @@
 
   "input": {
     "tag": "div",
-    "class": "new_message",
+    "class": "newUserStory",
     "inner": [
       {
         "tag": "div",
@@ -38,7 +38,17 @@
             {
               "tag": "input",
               "class": "input",
-              "placeholder": "Enter message here..."
+              "placeholder": "name"
+            },
+            {
+              "tag": "input",
+              "class": "input",
+              "placeholder": "text"
+            },
+            {
+              "tag": "input",
+              "class": "input",
+              "placeholder": "aufwand"
             },
             {
               "tag": "input",

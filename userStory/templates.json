@@ -1,0 +1,57 @@
+{
+  "main": {
+    "tag": "div",
+    "class": "userStorys"
+  },
+  "userStory": {
+    "tag": "div",
+    "class": "userStory",
+    "inner": [
+      {
+        "tag": "div",
+        "class": "name",
+        "inner": "%name%"
+      },
+      {
+        "tag": "div",
+        "class": "text",
+        "inner": "%text%"
+      },
+      {
+        "tag": "div",
+        "class": "aufwand",
+        "inner": "%aufwand%"
+      }
+    ]
+  },
+  "input": {
+    "tag": "div",
+    "class": "newUs",
+    "inner": {
+      "tag": "form",
+      "inner": [
+        {
+          "tag": "input",
+          "class": "inputName",
+          "placeholder": "Name"
+        },
+        {
+          "tag": "input",
+          "class": "inputText",
+          "placeholder": "Text"
+        },
+        {
+          "tag": "input",
+          "class": "inputAufwand",
+          "placeholder": "Aufwand"
+        },
+        {
+          "tag": "input",
+          "type": "submit",
+          "value": "Send"
+        }
+      ],
+      "onsubmit": "%onsubmit%"
+    }
+  }
+}
