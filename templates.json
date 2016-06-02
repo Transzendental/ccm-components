@@ -3,24 +3,54 @@
     "tag": "div",
     "class": "userStorys"
   },
+  "usTable": {
+    "tag": "table",
+    "class": "usTable"
+  },
+  "usTableHeader": {
+      "tag": "tr",
+      "inner": [
+        {
+          "tag": "th",
+          "inner": "NAME"
+        },
+        {
+          "tag": "th",
+          "inner": "BESCHREIBUNG"
+        },
+        {
+          "tag": "th",
+          "inner": "AUFWAND"
+        },
+        {
+          "tag": "th",
+          "inner": "USER"
+        }
+      ]
+  },
   "userStory": {
-    "tag": "div",
+    "tag": "tr",
     "class": "userStory",
     "inner": [
       {
-        "tag": "div",
+        "tag": "td",
         "class": "name",
         "inner": "%name%"
       },
       {
-        "tag": "div",
+        "tag": "td",
         "class": "text",
         "inner": "%text%"
       },
       {
-        "tag": "div",
+        "tag": "td",
         "class": "aufwand",
         "inner": "%aufwand%"
+      },
+      {
+        "tag": "td",
+        "class": "user",
+        "inner": "%user%"
       }
     ]
   },

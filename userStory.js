@@ -42,17 +42,16 @@ ccm.component({
 
                     var usDiv = ccm.helper.find(self, '.userStorys');
 
-                    usDiv.append(ccm.helper.html(self.html.get('userStory'), {
-                        name: "NAME",
-                        text: "BESCHREIBUNG",
-                        aufwand: "AUFWAND",
-                        user: "USER"
-                    }));
+                    usDiv.append(ccm.helper.html(self.html.get('usTable')));
+
+                    var usTable = ccm.helper.find(self, '.usTable');
+
+                    usTable.append(ccm.helper.html(self.html.get('usTableHeader')));
 
                     for (var i = 0; i < dataset.storys.length; i++) {
                         var us = dataset.storys[i];
-
-                        usDiv.append(ccm.helper.html(self.html.get('userStory'), {
+                        
+                        usTable.append(ccm.helper.html(self.html.get('userStory'), {
                             name: ccm.helper.val(us.name),
                             text: ccm.helper.val(us.text),
                             aufwand: ccm.helper.val(us.aufwand),
