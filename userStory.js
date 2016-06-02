@@ -9,7 +9,6 @@ ccm.component({
         store: [ccm.store, {url: 'ws://ccm2.inf.h-brs.de/index.js', store: 'userStory'}],
         style: [ccm.load, 'style.css'],
         user: [ccm.instance, 'https://kaul.inf.h-brs.de/ccm/components/user2.js']
-
     },
 
     Instance: function () {
@@ -46,7 +45,8 @@ ccm.component({
                     usDiv.append(ccm.helper.html(self.html.get('userStory'), {
                         name: "NAME",
                         text: "BESCHREIBUNG",
-                        aufwand: "AUFWAND"
+                        aufwand: "AUFWAND",
+                        user: "USER"
                     }));
 
                     for (var i = 0; i < dataset.storys.length; i++) {
@@ -55,7 +55,8 @@ ccm.component({
                         usDiv.append(ccm.helper.html(self.html.get('userStory'), {
                             name: ccm.helper.val(us.name),
                             text: ccm.helper.val(us.text),
-                            aufwand: ccm.helper.val(us.aufwand)
+                            aufwand: ccm.helper.val(us.aufwand),
+                            user: ccm.helper.val(us.user)
                         }));
                     }
 
@@ -68,9 +69,18 @@ ccm.component({
 
                             if (iName === '') return;
 
-                            dataset.storys.push({name: iName, text: iText, aufwand: iAufwand});
-                            self.store.set(dataset, function () {
-                                self.render();
+                            self.user.login( function () {
+
+                                dataset.storys.push({
+                                    name: iName,
+                                    text: iText,
+                                    aufwand: iAufwand,
+                                    user: self.user.data().key
+                                });
+
+                                self.store.set(dataset, function () {
+                                    self.render();
+                                });
                             });
 
                             return false;
