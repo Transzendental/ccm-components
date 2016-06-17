@@ -66,9 +66,9 @@
           "placeholder": "Name"
         },
         {
-          "tag": "input",
+          "tag": "textarea",
           "class": "inputText",
-          "placeholder": "Text"
+          "placeholder": "Beschreibung"
         },
         {
           "tag": "input",
