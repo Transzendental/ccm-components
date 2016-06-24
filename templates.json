@@ -12,18 +12,22 @@
       "inner": [
         {
           "tag": "th",
+          "id": "name",
           "inner": "NAME"
         },
         {
           "tag": "th",
+          "id": "descr",
           "inner": "BESCHREIBUNG"
         },
         {
           "tag": "th",
+          "id": "cost",
           "inner": "AUFWAND"
         },
         {
           "tag": "th",
+          "id": "user",
           "inner": "USER"
         }
       ]
@@ -31,6 +35,7 @@
   "userStory": {
     "tag": "tr",
     "class": "userStory",
+    "id": "%id%",
     "inner": [
       {
         "tag": "td",
@@ -51,6 +56,20 @@
         "tag": "td",
         "class": "user",
         "inner": "%user%"
+      },
+      {
+        "tag": "input",
+        "class": "btnDone",
+        "type": "submit",
+        "value": "Done",
+        "onclick": "%clickDone%"
+      },
+      {
+        "tag": "input",
+        "class": "btnDelete",
+        "type": "submit",
+        "value": "Delete",
+        "onclick": "%clickDelete%"
       }
     ]
   },
