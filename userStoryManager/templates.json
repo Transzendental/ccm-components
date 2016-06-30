@@ -1,0 +1,157 @@
+{
+  "main": {
+    "tag": "div",
+    "class": "userStorys"
+  },
+  "usTable": {
+    "tag": "table",
+    "class": "usTable"
+  },
+  "usTableHeader": {
+    "tag": "tr",
+    "inner": [
+      {
+        "tag": "th",
+        "id": "name",
+        "inner": "NAME"
+      },
+      {
+        "tag": "th",
+        "id": "descr",
+        "inner": "BESCHREIBUNG"
+      },
+      {
+        "tag": "th",
+        "id": "cost",
+        "inner": "AUFWAND"
+      },
+      {
+        "tag": "th",
+        "id": "project",
+        "inner": "PROJECT"
+      },
+      {
+        "tag": "th",
+        "id": "user",
+        "inner": "USER"
+      }
+    ]
+  },
+  "userStory": {
+    "tag": "tr",
+    "class": "userStory",
+    "id": "%id%",
+    "inner": [
+      {
+        "tag": "td",
+        "class": "name",
+        "inner": "%name%"
+      },
+      {
+        "tag": "td",
+        "class": "text",
+        "inner": "%text%"
+      },
+      {
+        "tag": "td",
+        "class": "cost",
+        "inner": "%cost%"
+      },
+      {
+        "tag": "td",
+        "class": "project",
+        "inner": "%project%"
+      },
+      {
+        "tag": "td",
+        "class": "user",
+        "inner": "%user%"
+      },
+      {
+        "tag": "input",
+        "class": "btnDone",
+        "type": "submit",
+        "value": "Done",
+        "onclick": "%clickDone%"
+      },
+      {
+        "tag": "input",
+        "class": "btnDelete",
+        "type": "submit",
+        "value": "Delete",
+        "onclick": "%clickDelete%"
+      }
+    ]
+  },
+  "input": {
+    "tag": "div",
+    "class": "inputDiv",
+    "inner": [
+      {
+        "tag": "form",
+        "class": "newUs",
+        "inner": [
+          {
+            "tag": "p",
+            "inner": "Neue UserStorys anlegen:"
+          },
+          {
+            "tag": "input",
+            "id": "usName",
+            "placeholder": "Name"
+          },
+          {
+            "tag": "textarea",
+            "id": "usText",
+            "placeholder": "Beschreibung"
+          },
+          {
+            "tag": "input",
+            "id": "usCost",
+            "placeholder": "Aufwand"
+          },
+          {
+            "tag": "label",
+            "for": "usProj",
+            "inner": "Projekt: "
+          },
+          {
+            "tag": "select",
+            "id": "usProj"
+          },
+          {
+            "tag": "input",
+            "type": "submit",
+            "value": "Send"
+          }
+        ],
+        "onsubmit": "%usSubmit%"
+      },
+      {
+        "tag": "form",
+        "class": "newProj",
+        "inner": [
+          {
+            "tag": "p",
+            "inner": "Neues Projekt anlegen:"
+          },
+          {
+            "tag": "input",
+            "id": "projName",
+            "placeholder": "Name"
+          },
+          {
+            "tag": "textarea",
+            "id": "projText",
+            "placeholder": "Beschreibung"
+          },
+          {
+            "tag": "input",
+            "type": "submit",
+            "value": "Send"
+          }
+        ],
+        "onsubmit": "%projSubmit%"
+      }]
+  }
+}

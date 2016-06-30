@@ -4,13 +4,13 @@
     {
       "name": "test1",
       "text": "qwertzuiop",
-      "aufwand": 5,
+      "cost": 5,
       "user": "bkirsc2s"
     },
     {
       "name": "test2",
       "text": "asdfghjkl",
-      "aufwand": 5,
+      "cost": 5,
       "user": "bkirsc2s"
     }
   ]

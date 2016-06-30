@@ -35,11 +35,12 @@
     text-align: center;
 }
 
-.ccm-userStory .newUs{
+.ccm-userStory .newUs, .newProj{
     width:500px;
+    float: left;
 }
 
-.ccm-userStory .newUs input, textarea{
+.ccm-userStory .inputDiv input, textarea{
     min-width: 500px;
     max-width: 500px;
     box-sizing: border-box;
