@@ -1,9 +1,8 @@
-.ccm-userStory div{background-color:#fff}.ccm-userStory table{border-collapse:collapse}
-.ccm-userStory td{width:150px;padding:0;margin:0;border-bottom:1px solid #ddd}.ccm-userStory tr:nth-child(even){background-color:#f2f2f2}
-.ccm-userStory tr:hover{background-color:#ddd}.ccm-userStory td.text{width:300px}
-.ccm-userStory td.aufwand{width:80px;text-align:right}.ccm-userStory td.user{width:100px;text-align:right}
-.ccm-userStory th{text-align:center}.ccm-userStory .newUs,.newProj{width:500px;float:left}
-.ccm-userStory .inputDiv input,textarea{min-width:500px;max-width:500px;box-sizing:border-box}
-.ccm-userStory .newUs .inputAufwand{width:200px}.ccm-userStory input,textarea{background:#cfcfcf;font-size:14px;border:1px solid silver}
+.ccm-userStory table{border-collapse:collapse;width:100%}.ccm-userStory table input{width:70px}
+.ccm-userStory td{padding:0 5px;margin:0;border-bottom:1px solid #ddd}.ccm-userStory tr:nth-child(even){background-color:#f2f2f2}
+.ccm-userStory tr:hover{background-color:#ddd}.ccm-userStory td.aufwand,td.user{text-align:right}
+.ccm-userStory th{text-align:center}.ccm-userStory .newUs,.newProj{width:50%;float:left}
+.ccm-userStory .inputDiv{overflow:hidden}.ccm-userStory .inputDiv input,textarea{min-width:300px;max-width:100%;box-sizing:border-box}
+.ccm-userStory .newUs .inputAufwand{width:200px}.ccm-userStory input,textarea{background:#cfcfcf;width:100%;font-size:14px;border:1px solid silver}
 .ccm-userStory input[type=submit]{padding:7px 14px;color:#000;vertical-align:middle}
 .ccm-userStory input[type=submit]:hover{background:#525252;color:#fff}.ccm-userStory .done{color:#ccc}
