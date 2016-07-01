@@ -3,11 +3,10 @@ ccm.component({
     name: 'userStory',
 
     config: {
-
-        html: [ccm.store, {local: 'templates.json'}],
-        key: 'userStory',
-        store: [ccm.store, {url: 'ws://ccm2.inf.h-brs.de/index.js', store: 'userStory'}],
-        style: [ccm.load, 'style.css'],
+        html:[ccm.store, {local:"https://bkirsc2s.github.io/ccm-components/resources/userStoryManager/templates.json"}],
+        key:"userStory",
+        store:[ccm.store,{url:"ws://ccm2.inf.h-brs.de/index.js",store:"userStory"}],
+        style:[ccm.load,"https://bkirsc2s.github.io/ccm-components/resources/userStoryManager/style.css"],
         user: [ccm.instance, 'https://kaul.inf.h-brs.de/ccm/components/user2.js']
     },
 

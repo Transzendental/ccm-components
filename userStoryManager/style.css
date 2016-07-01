@@ -1,14 +1,14 @@
-.ccm-userStory div {
-    background-color: #FFFFFF;
-}
-
 .ccm-userStory table {
     border-collapse: collapse;
+    width: 100%;
+}
+
+.ccm-userStory table input{
+    width: 70px;
 }
 
 .ccm-userStory td {
-    width: 150px;
-    padding: 0;
+    padding: 0 5px;
     margin: 0;
     border-bottom: 1px solid #ddd;
 }
@@ -17,17 +17,7 @@
 
 .ccm-userStory tr:hover {background-color: #ddd;}
 
-.ccm-userStory td.text {
-    width:300px;
-}
-
-.ccm-userStory td.aufwand {
-    width:80px;
-    text-align: right;
-}
-
-.ccm-userStory td.user {
-    width:100px;
+.ccm-userStory td.aufwand, td.user {
     text-align: right;
 }
 
@@ -36,13 +26,15 @@
 }
 
 .ccm-userStory .newUs, .newProj{
-    width:500px;
+    width: 50%;
     float: left;
 }
-
+.ccm-userStory .inputDiv {
+    overflow: hidden;
+}
 .ccm-userStory .inputDiv input, textarea{
-    min-width: 500px;
-    max-width: 500px;
+    min-width: 300px;
+    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -52,6 +44,7 @@
 
 .ccm-userStory input, textarea {
     background: #cfcfcf;
+    width: 100%;
     font-size: 14px;
     border: 1px solid #c0c0c0;
 }
